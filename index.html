@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ChartJS - Pie Chart</title>
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="Chart.js"></script>
+	</head>
+	<body>
+		<canvas id="mycanvas" width="256" height="256">
+		<script>
+			$(document).ready(function(){
+				var ctx = $("#mycanvas").get(0).getContext("2d");
+
+				//pie chart data
+				var data = [
+					{
+						value: 120,
+						color: "Red",
+						highlight: "LightCoral",
+						label: "Psoe"
+					},
+					{
+						value: 88,
+						color: "Cyan",
+						highlight: "LightBlue",
+						label: "PP"
+					},
+					{
+						value: 52,
+						color: "Green",
+						highlight: "GreenYellow",
+						label: "Vox"
+					},
+					{
+						value: 35,
+						color: "Purple",
+						highlight: "RebeccaPurple",
+						label: "Unidas Podemos"
+					},
+					{
+						value: 13,
+						color: "GoldenRod",
+						highlight: "SandyBrown",
+						label: "Esquerra Republicana"
+					},
+					{
+						value: 10,
+						color: "orange",
+						highlight: "darkorange",
+						label: "Ciudadanos"
+					}
+				];
+
+				//draw
+				var piechart = new Chart(ctx).Pie(data);
+			});
+		</script>
+	</body>
+</html>
